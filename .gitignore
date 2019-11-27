@@ -61,4 +61,6 @@ typings/
 .next
 
 .github
+.vscode
 /dist
+package-lock.json

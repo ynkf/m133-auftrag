@@ -64,3 +64,4 @@ typings/
 .vscode
 /dist
 package-lock.json
+/auftrag

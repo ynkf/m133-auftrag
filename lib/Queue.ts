@@ -1,13 +1,17 @@
 import { IDataScructure } from "./IDataStructure";
 
-export class Queue implements IDataScructure {
-    private queue = [];
+export class Queue<T> implements IDataScructure {
+    private queue: Array<T>;
+
+    constructor() {
+        this.queue = new Array<T>();
+    }
 
     public size(): number {
         return this.queue.length;
     }
 
-    public enqueue(value: any) {
+    public enqueue(value: T) {
         this.queue.push(value);
     }
 
@@ -15,11 +19,11 @@ export class Queue implements IDataScructure {
         return this.queue.length < 1;
     }
 
-    public peek(): any {
+    public peek(): T {
         return this.queue[0];
     }
 
-    public poll(): any {
+    public poll(): T {
         return this.queue.shift();
     }
 }

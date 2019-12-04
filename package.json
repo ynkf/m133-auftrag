@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "test": "mocha"
+        "test:s": "mocha",
+        "test": "node node_modules/mocha/bin/mocha -r ts-node/register test/**/*.tests.ts"        
     },
     "author": "Domenic Helfenstein",
     "license": "MIT",

@@ -1,13 +1,19 @@
 {
-    "name": "queue",
+    "name": "DataStructures",
     "version": "1.0.0",
-    "description": "",
-    "scripts": {        
-        "test": "node node_modules/mocha/bin/mocha -r ts-node/register test/**/*.tests.ts"        
+    "scripts": {
+        "tsc": "tsc",
+        "distribute:html": "copyfiles web/*.html dist",
+        "test": "node node_modules/mocha/bin/mocha -r ts-node/register test/**/*.tests.ts",
+        "start": "npm run tsc && npm run distribute:html && node dist/web/server.js "
     },
-    "author": "Domenic Helfenstein",
+    "author": "Yannick Frischknecht",
     "license": "MIT",
-    "dependencies": {},
+    "dependencies": {
+        "@types/express": "^4.17.2",
+        "copyfiles": "^2.1.1",
+        "express": "^4.17.1"
+    },
     "devDependencies": {
         "@types/chai": "4.2.5",
         "@types/mocha": "5.2.7",

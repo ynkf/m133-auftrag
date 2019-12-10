@@ -1,6 +1,6 @@
-import { IDataScructure } from "./IDataStructure";
+import { IDataStructure } from "./IDataStructure";
 
-export class Queue<T> implements IDataScructure {
+export class Queue<T> implements IDataStructure<T> {
     private queue: Array<T>;
 
     constructor() {
@@ -24,6 +24,6 @@ export class Queue<T> implements IDataScructure {
     }
 
     public poll(): T {
-        return this.queue.shift();
+        return <T>this.queue.shift();
     }
 }
